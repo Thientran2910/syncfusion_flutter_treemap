@@ -1,6 +1,6 @@
 name: syncfusion_flutter_treemap
 description: A Flutter Treemap library for creating interactive treemap to visualize flat and hierarchical data based on squarified, slice, and dice algorithms.
-version: 29.2.10
+version: 31.1.20
 homepage: https://github.com/syncfusion/flutter-widgets/tree/master/packages/syncfusion_flutter_treemap
 
 screenshots:
@@ -15,18 +15,12 @@ screenshots:
 
 environment:
   sdk: ^3.7.0
+  flutter: ">=3.35.1"
+
+flutter:
+  uses-material-design: true
 
 dependencies:
   flutter:
     sdk: flutter
-
-  syncfusion_flutter_core: ^29.2.10
-    
-      
-      
-      
-
-flutter:
-  assets:
-    - assets/images/
-    - assets/fonts/Roboto-Medium.ttf
+  syncfusion_flutter_core: ^31.1.20

@@ -5,7 +5,7 @@ void main() {
   return runApp(const TreemapApp());
 }
 
-/// This widget will be the root of application.
+/// This widget will be the root of the application.
 class TreemapApp extends StatelessWidget {
   const TreemapApp({super.key});
 

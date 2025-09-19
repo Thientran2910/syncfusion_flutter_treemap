@@ -1,6 +1,6 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
-export "FLUTTER_ROOT=/Users/thientv/Workspace/flutter_versions/3_32_2/flutter"
+export "FLUTTER_ROOT=/Users/thientv/Workspace/flutter_versions/3_35_4/flutter"
 export "FLUTTER_APPLICATION_PATH=/Users/thientv/Workspace/Flutter_Projects/syncfusion_flutter_treemap/example"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
 export "FLUTTER_TARGET=lib/main.dart"

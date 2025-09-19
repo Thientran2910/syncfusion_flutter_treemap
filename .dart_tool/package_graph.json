@@ -5,7 +5,7 @@
   "packages": [
     {
       "name": "syncfusion_flutter_treemap",
-      "version": "29.2.10",
+      "version": "31.1.20",
       "dependencies": [
         "flutter",
         "syncfusion_flutter_core"
@@ -14,7 +14,7 @@
     },
     {
       "name": "syncfusion_flutter_core",
-      "version": "29.2.10",
+      "version": "31.1.20",
       "dependencies": [
         "flutter",
         "vector_math"
@@ -34,7 +34,7 @@
     },
     {
       "name": "vector_math",
-      "version": "2.1.4",
+      "version": "2.2.0",
       "dependencies": []
     },
     {

@@ -54,8 +54,10 @@ Widget _buildAnimatedBuilder(
     );
   }
 
+  final double tx = 1.0 / scale.width;
+  final double ty = 1.0 / scale.height;
   child = Transform(
-    transform: Matrix4.identity()..scale(1.0 / scale.width, 1.0 / scale.height),
+    transform: Matrix4.identity()..scaleByDouble(tx, ty, tx, 1.0),
     child: child,
   );
 
@@ -452,8 +454,18 @@ mixin _TreemapMixin {
                 alignment: _getEffectiveAlignment(direction),
                 transform:
                     Matrix4.identity()
-                      ..scale(scaleSize.width, scaleSize.height)
-                      ..leftTranslate(translation.dx, translation.dy),
+                      ..scaleByDouble(
+                        scaleSize.width,
+                        scaleSize.height,
+                        scaleSize.width,
+                        1.0,
+                      )
+                      ..leftTranslateByDouble(
+                        translation.dx,
+                        translation.dy,
+                        0.0,
+                        1.0,
+                      ),
                 child: Stack(
                   clipBehavior: Clip.none,
                   children: _buildTiles(
@@ -511,8 +523,18 @@ mixin _TreemapMixin {
           alignment: _getEffectiveAlignment(direction),
           transform:
               Matrix4.identity()
-                ..scale(scaleSize.width, scaleSize.height)
-                ..leftTranslate(translation.dx, translation.dy),
+                ..scaleByDouble(
+                  scaleSize.width,
+                  scaleSize.height,
+                  scaleSize.width,
+                  1.0,
+                )
+                ..leftTranslateByDouble(
+                  translation.dx,
+                  translation.dy,
+                  0.0,
+                  1.0,
+                ),
           child: Stack(
             clipBehavior: Clip.none,
             children: _buildTiles(
@@ -527,10 +549,17 @@ mixin _TreemapMixin {
           alignment: _getEffectiveAlignment(direction),
           transform:
               Matrix4.identity()
-                ..scale(descendantsScaleSize.width, descendantsScaleSize.height)
-                ..leftTranslate(
+                ..scaleByDouble(
+                  descendantsScaleSize.width,
+                  descendantsScaleSize.height,
+                  descendantsScaleSize.width,
+                  1.0,
+                )
+                ..leftTranslateByDouble(
                   descendantsTranslation.dx,
                   descendantsTranslation.dy,
+                  0.0,
+                  1.0,
                 ),
           child: Opacity(
             opacity: 1.0 - _tileOpacity.evaluate(_opacityAnimation),
